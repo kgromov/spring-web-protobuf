@@ -1,0 +1,25 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.kgromov.model;
+
+message Person {
+  int32 id = 1;
+  string first_name = 2;
+  string last_name = 3;
+  Gender gender = 4;
+  Address address = 5;
+}
+
+message Address {
+  string country = 1;
+  string city = 2;
+  string zip_code = 3;
+  string street = 4;
+  string alternative_address = 5;
+}
+
+enum Gender {
+  MALE = 0;
+  FEMALE = 1;
+  TRANSGENDER = -1;
+}
