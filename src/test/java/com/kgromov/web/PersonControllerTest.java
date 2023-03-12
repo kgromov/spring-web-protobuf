@@ -1,18 +1,22 @@
 package com.kgromov.web;
 
 import com.kgromov.model.Person;
+import com.kgromov.service.PersonService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@WebMvcTest
+@SpringBootTest
+//@WebMvcTest
 class PersonControllerTest {
     @Autowired
     private RestTemplate restTemplate;
+    @Autowired
+    private PersonService personService;
 
     @Test
     void getPerson() {
