@@ -16,8 +16,8 @@ public class PersonService {
     public List<Person> getPersons() {
         RandomService random = new Faker().random();
         return List.of(
-                this.buildPerson(random.nextInt(Integer.MIN_VALUE)),
-                this.buildPerson(random.nextInt(Integer.MIN_VALUE))
+                this.buildPerson(random.nextInt(Integer.MAX_VALUE)),
+                this.buildPerson(random.nextInt(Integer.MAX_VALUE))
         );
     }
 
