@@ -65,6 +65,13 @@
 
     <build>
         <plugins>
+         <!-- Requires a lot of additional stuff:
+            1) gu command
+            2) visual studio 10
+            <plugin>
+                <groupId>org.graalvm.buildtools</groupId>
+                <artifactId>native-maven-plugin</artifactId>
+            </plugin>-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

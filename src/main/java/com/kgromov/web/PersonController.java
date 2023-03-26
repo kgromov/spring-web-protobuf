@@ -26,6 +26,14 @@ public class PersonController {
         return personService.getPersons();
     }
 
+    /*
+     * ObservationRegistry can be configured (aka instrumented with desired ObservationHandler:
+     *  observationRegistry.observationConfig()
+                .observationHandler(new ObservationTextPublisher())
+     * Seems actuator starter brings MeterObservationHandler (with default implementation - DefaultMeterObservationHandler)
+     * In order to include other handlers it's required to add more libs - e.g.:
+     * micrometer-tracing for TracingObservationHandler
+     */
     @GetMapping("/persons/{id}")
     public Person getPerson(@PathVariable Integer id) {
         return Observation
